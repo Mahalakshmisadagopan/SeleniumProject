@@ -7,7 +7,7 @@ public class Homework2 {
 		int i = 0;
 		int num =0;
 
-		String primeNumbers= "";
+		String Numbers= "";
 		for (i=1;i<=100;i++)
 		{
 			int counter=0;
@@ -20,15 +20,15 @@ public class Homework2 {
 			}
 			if (counter==2)
 			{
-				primeNumbers=primeNumbers + i + " ";
+				Numbers=Numbers + i + " ";
 			}
-			System.out.println("Prime numbers from 1 to 100 are:");
-			syso
-
+			
 		}
+		System.out.println("Prime numbers from 1 to 100 are:");
+		System.out.println(Numbers);
+
 	}
 
-
 }
 
-}
+
