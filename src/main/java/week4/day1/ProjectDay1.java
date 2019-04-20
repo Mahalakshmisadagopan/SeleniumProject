@@ -79,7 +79,7 @@ public class ProjectDay1 {
 		}
 		Integer max = Collections.max(ls);
 		System.out.println(max);
-		String Carname = driver.findElementByXPath("//div[contains(text(),'"+max+"')]/../../preceding::h3").getText();
+		String Carname = driver.findElementByXPath("(//div[contains(text(),'"+max+"')])/../../preceding-sibling::div/h3").getText();
 		System.out.println("Highest company of car" +Carname);
 		//Highest value and its brand name
 		//driver.findElementByXPath("//div[text()=' Price: High to Low ']").click();

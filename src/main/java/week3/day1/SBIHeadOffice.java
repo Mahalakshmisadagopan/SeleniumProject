@@ -17,5 +17,9 @@ public abstract class SBIHeadOffice implements LearnInterface{
 	public abstract void Method1();
 	public abstract void Method2();
 	public abstract void Method3();
+	public void customer() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

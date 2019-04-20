@@ -33,10 +33,11 @@ public class LearnWindow {
 		for (String string : allWindows) {
 			System.out.println(string);
 		}
+		//To get sessionid of the each session
 		System.out.println(driver.getSessionId());
 		List<String> ls = new ArrayList<>();
 		ls.addAll(allWindows);
-		
+			
 		System.out.println(driver.getTitle());
 		WebDriver window = driver.switchTo().window(ls.get(1));
 		System.out.println(driver.getTitle());

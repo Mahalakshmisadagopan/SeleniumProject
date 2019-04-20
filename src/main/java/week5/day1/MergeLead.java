@@ -1,27 +1,20 @@
-package week4.day1;
+package week5.day1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
-public class Homework1 {
+import Utils.ProjectMethods;
 
-	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "./driver\\chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver();
-		driver.get("http://leaftaps.com/opentaps");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.findElementById("username").sendKeys("DemoSalesManager");
-		driver.findElementById("password").sendKeys("crmsfa");
-		driver.findElementByClassName("decorativeSubmit").click();
-		driver.findElementByLinkText("CRM/SFA").click();
-		Thread.sleep(3000);
+@Test
+public class MergeLead extends ProjectMethods{
+
+	public  void Mergelead() throws InterruptedException  {
+		
 		driver.findElementByXPath("//a[text()='Leads']").click();
 		Thread.sleep(1000); 
 		driver.findElementByXPath("//a[text()='Merge Leads']").click();
@@ -123,7 +116,7 @@ public class Homework1 {
 		String Errormessage = driver.findElementByXPath("//div[@class='x-toolbar x-small-editor']/div").getText();
 		System.out.println("Error message for from lead " +Errormessage );
 		//driver.close();
-
+		
 	}
 
 }

@@ -27,8 +27,8 @@ public class DeleteLead {
 			//To sort in descending and take the gmail id available in list
 			
 			//driver.findElementById("ext-gen862").click();
-			driver.findElementByXPath("(//a[@class='x-grid3-hd-btn'])[16]").click();
-			driver.findElementByClassName("x-menu-item xg-hmenu-sort-desc").click();
+			driver.findElementByXPath("(//div[@unselectable='on'])[16]").click();
+			driver.findElementByXPath("(//div[@unselectable='on'])[16]").click();
 			WebElement Gmailid = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-primaryEmail']/a)[1]");
 			String Gmail = Gmailid.getText();
 			driver.findElementByXPath("//label[text()='Email Address:']/following::input").sendKeys(Gmail);
